@@ -16,20 +16,18 @@
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="265dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivPoster"
         tools:layout_editor_absoluteY="0dp"
-        tools:text="Title"
-        />
+        tools:text="Title" />
 
     <TextView
         android:id="@+id/tvOverview"
-        android:layout_width="265dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"

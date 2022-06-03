@@ -17,6 +17,18 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <ImageView
+        android:id="@+id/ivPlayButton"
+        android:src="@drawable/play"
+        android:tint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBackdrop"/>
+
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
@@ -31,14 +43,13 @@
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivBackdrop" />
+        app:layout_constraintTop_toBottomOf="@+id/ivBackdrop"/>
 
     <RatingBar
         android:id="@+id/rbVoteAverage"
-        style="@style/Widget.AppCompat.RatingBar.Small"
-        android:progressTint="#FF0000"
+        android:progressDrawable="@drawable/custom_ratingbar_selector"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="32dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:numStars="5"

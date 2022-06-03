@@ -40,7 +40,7 @@ public class Movie {
         return overview;
     }
 
-    public String backdropPath() {
+    public String getBackdropPath() {
         return String.format("https://image.tmdb.org/t/p/w1280/%s", backdropPath);
     }
 }

@@ -10,8 +10,8 @@
         android:id="@+id/ivPoster"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -24,6 +24,8 @@
         app:layout_constraintStart_toEndOf="@+id/ivPoster"
         tools:layout_editor_absoluteY="0dp"
         tools:text="Title"
+        android:ellipsize="end"
+        android:maxLines="2"
         />
 
     <TextView
@@ -31,13 +33,15 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
         android:text="TextView"
+        android:ellipsize="end"
+        android:maxLines="7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivPoster"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPoster"
         tools:layout_marginTop="5dp"
-        tools:text="Movie overview" />
+        tools:text="Movie overview"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.flixster.MovieDetailsActivity;
 import com.example.flixster.R;
 import com.example.flixster.models.Movie;
@@ -86,6 +87,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             }
 
             Glide.with(context).load(imageURL).placeholder(placeholderID).into(ivPoster);
+
         }
 
         @Override
@@ -97,6 +99,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             if (position != RecyclerView.NO_POSITION) {
                 // Get the movie at the position
                 Movie movie = movies.get(position);
+
+                Log.i("MainActivity", Integer.toString(movie.getId()));
+
                 // Create new intent for the movie details activity
                 Intent intent = new Intent(context, MovieDetailsActivity.class);
                 // Serialize the movie using parceler

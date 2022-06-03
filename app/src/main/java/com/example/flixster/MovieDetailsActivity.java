@@ -12,6 +12,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.flixster.models.Movie;
 
 import org.parceler.Parcels;
@@ -49,7 +50,6 @@ public class MovieDetailsActivity extends AppCompatActivity {
             }
         });
 
-
         // Unwrap the movie passed in via intent
         movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));
         Log.d("MovieDetailsActivity", String.format("Showing details for '%s", movie.getTitle()));
@@ -58,7 +58,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         tvTitle.setText(movie.getTitle());
         tvOverview.setText(movie.getOverview());
 
-        Glide.with(this).load(movie.getBackdropPath()).into(ivBackdrop);
+        Glide.with(this).load(movie.getBackdropPath()).centerCrop().transform(new RoundedCorners(30)).into(ivBackdrop);
 
         // Vote average is 0..10, convert to 0..5 by dividing by 2
         float voteAverage = movie.getVoteAverage().floatValue();

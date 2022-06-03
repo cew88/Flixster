@@ -28,7 +28,7 @@ Here's a walkthrough of implemented user stories: https://imgur.com/a/h6xBDUq
 
 ## Notes
 
-There were several difficulties with implementing the YouTube integration. Syntax errors led to difficulty parsing JSON results from API requests to the Movie Database API, and additional requirements were needed to access the YouTube player in order to play the trailers.
+The required user stories were implemented without many errors since the videos helped provide a lot of guidance. Implementing rounded edges resulted in weird spaces in the layouts due to hard-coding the poster and backdrop image sizes. Adding the parameter for the images to adjust bounds in the XML file resolved this issue. There were also several difficulties with implementing the YouTube integration. Syntax errors led to difficulty parsing JSON results from API requests to the Movie Database API, and additional requirements were needed to access the YouTube player in order to play the trailers.
 
 ## Open-source libraries used
 
